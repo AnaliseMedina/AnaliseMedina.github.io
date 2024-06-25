@@ -1,74 +1,78 @@
-/* styles.css */
-
+/* Center the container on the page */
 body {
-    font-family: Arial, sans-serif;
-    line-height: 1.6;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
     margin: 0;
-    padding: 0;
-    background-color: #f4f4f4;
+    background-color: #f0f0f0;
 }
 
-header {
-    background: #333;
-    color: #fff;
-    padding: 1rem 0;
-    text-align: center;
-}
-
-header h1 {
-    margin: 0;
-}
-
-nav ul {
-    list-style: none;
-    padding: 0;
-}
-
-nav ul li {
-    display: inline;
-    margin: 0 10px;
-}
-
-nav ul li a {
-    color: #fff;
-    text-decoration: none;
-}
-
-section {
-    padding: 2rem;
-    margin: 1rem auto;
-    max-width: 800px;
-    background: #fff;
-    border-radius: 8px;
-    box-shadow: 0 0 10px rgba(0,0,0,0.1);
-}
-
-section h2 {
-    margin-top: 0;
-}
-
-.project {
-    margin-bottom: 1.5rem;
-}
-
-.project h3 {
-    margin-bottom: 0.5rem;
-}
-
-footer {
-    text-align: center;
-    padding: 1rem 0;
-    background: #333;
-    color: #fff;
-    position: fixed;
+/* Style the site header */
+.site-header {
     width: 100%;
-    bottom: 0;
+    background-color: #333;
+    color: #fff;
+    padding: 20px 0;
+    text-align: center;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
-a {
-    color: #333;
+.site-title {
+    margin: 0;
+    font-size: 2em;
 }
 
-a:hover {
-    color: #555;
+/* Style the main container */
+.container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: auto auto;
+    gap: 20px;
+    width: 80%;
+    max-width: 800px;
+    margin-top: 20px; /* Add some spacing below the header */
+}
+
+/* Make top boxes span each half of the top row */
+.top-box {
+    grid-column: span 1;
+}
+
+/* Make the single-column div span both columns */
+.single-column {
+    grid-column: span 2;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+/* Style the text boxes */
+.text-box {
+    background-color: #fff;
+    padding: 20px;
+    border: 1px solid #ccc;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Center the header and make it bold */
+.header {
+    text-align: center;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+/* Left-align the body text */
+.body-text {
+    text-align: left;
+    margin: 0 0 10px 0;
+}
+
+/* Style and shrink the photo */
+.photo {
+    display: block;
+    max-width: 100%; /* Ensures the image doesn't exceed the container's width */
+    width: 200px; /* Shrinks the image to 200px wide */
+    height: auto; /* Maintains the aspect ratio */
+    margin: 10px 0;
+    text-align: center;
 }
